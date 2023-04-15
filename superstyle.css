@@ -1,0 +1,162 @@
+/* общие стили */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: #ff0080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* шапка */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0080;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  margin-left: 20px;
+}
+
+/* футер */
+
+footer {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* страница последние */
+
+.latest {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.latest-item {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.latest-item img {
+  max-width: 100%;
+}
+
+.latest-item .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 0, 128, 0.8);
+}
+
+/* страница лучшие */
+
+.best {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.best-item {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.best-item img {
+  max-width: 100%;
+}
+
+.best-item .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 0, 128, 0.8);
+}
+
+/* страница интересные */
+
+.interesting {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.interesting-item {
+  flex-basis: calc(25% - 20px);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.interesting-item img {
+  max-width: 100%;
+}
+
+.interesting-item .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(255, 0, 128, 0.8);
+}
+
+/* устройства с маленьким экраном */
+
+@media screen and (max-width: 767px) {
+  .latest-item,
+  .best-item,
+  .interesting-item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .latest-item,
+  .best-item,
+  .interesting-item {
+    flex-basis: 100%;
+  }
+}
